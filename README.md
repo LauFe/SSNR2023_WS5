@@ -1,2 +1,7 @@
 # SSNR2023_WS5
-SSNR2023 resources for workshop 5
+This repository contains resources (code, datasets, etc) for Workshop 5 
+
+## Software requirements
+...
+## Datasets
+...
