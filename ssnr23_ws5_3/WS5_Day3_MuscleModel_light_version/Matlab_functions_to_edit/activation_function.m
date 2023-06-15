@@ -8,9 +8,10 @@ function da = activation_function(emg,a,dt)
 % Don't forget to use .* and ./ rather than * and /
 
     if emg>a
-        tau = 0.010.*(0.5+1.5*a);
+        tau = ................. ;
     else
         tau = 0.040./(0.5+1.5*a);
     end
-    da = (emg-a)./tau.*dt;
+    
+    da = ................;
 end

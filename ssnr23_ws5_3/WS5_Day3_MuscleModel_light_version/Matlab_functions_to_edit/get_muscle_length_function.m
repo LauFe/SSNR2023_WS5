@@ -8,5 +8,5 @@ function l_norm = get_muscle_length_function(lMT,lsT, l0M)
 
 % Don't forget to use ./ rather than /
 
-    l_norm = (lMT - lsT)./l0M;
+    l_norm = ................ ;
 end

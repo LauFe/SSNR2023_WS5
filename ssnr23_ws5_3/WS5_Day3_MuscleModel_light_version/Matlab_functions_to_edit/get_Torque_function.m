@@ -6,5 +6,5 @@ function T = get_Torque_function(L, F_M)
 
 % Don't forget to use .* rather than *
 
-    T = L.*F_M;
+    T = .......... ;
 end
