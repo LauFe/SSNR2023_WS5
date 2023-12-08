@@ -75,15 +75,15 @@ classdef CybEmg < handle
         %% Constructor
         function obj = CybEmg()
             %!python3 SocketV4.py &
-            switch nargin
-                case 0
+            %switch nargin
+            %    case 0
                     prompt = {'Enter the serial Port'};
                     dlgtitle = 'Serial Port';
                     dims = [1 35];
                     definput = {'ArmIO-a302'};
                     Port = inputdlg(prompt,dlgtitle,dims,definput,'on');
                     Port=Port{1};
-            end
+            %end
             % Define properties of the device
             %obj.acqBufferSize = floor(obj.timerPeriod*obj.sampleRate); 
             %baudRate = 115200;
@@ -91,7 +91,7 @@ classdef CybEmg < handle
 
             % Create serial object
             fprintf('Attempting connection...\n');
-            obj.EMGSerial = bluetooth(Port);
+            obj.EMGSerial = bluetooth(Port,1);
             
             % Get the device properties
             fprintf('Reading device settings...\n')

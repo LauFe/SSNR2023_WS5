@@ -93,6 +93,8 @@ classdef MyoControl < matlab.apps.AppBase
             app.RMSWindow = 250;
             
             try 
+                 disp(app.DAQDevice.EMGSerial.NumBytesAvailable)
+
                 if strcmp(app.Dev.Value, 'MyoBand')
                     app.DAQDevice.getData();
                 end
@@ -289,7 +291,7 @@ classdef MyoControl < matlab.apps.AppBase
             % If connect
             if app.cb_isConnected.Value
                 try
-                    instrreset
+
                     switch app.Dev.Value
                         case 'ArmIO'
                             % Create DAQ object
