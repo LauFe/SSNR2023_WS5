@@ -162,6 +162,7 @@ classdef MyoControl < matlab.apps.AppBase
                                 cmd = strcat('a',num2str(round(Estimate(2),0)),',',num2str(round(Estimate(1),0)));
                                 
                                 write(app.HandCom, cmd, 'string');
+                                %disp(cmd)
                             end
                             
                             % 8. Plot the estimation output on the cursor
@@ -292,10 +293,12 @@ classdef MyoControl < matlab.apps.AppBase
                     switch app.Dev.Value
                         case 'ArmIO'
                             % Create DAQ object
-                            app.DAQDevice = CybEmg(app.dp_Port.Value);
+                            %app.DAQDevice = CybEmg(app.dp_Port.Value);
+                            app.DAQDevice = CybEmg();
                         case 'MyoBand'
                             % Create DAQ object
-                            app.DAQDevice = CybEmg(app.dp_Port.Value);
+                            %app.DAQDevice = CybEmg(app.dp_Port.Value);
+                            app.DAQDevice = CybEmg();
                     end
                     
                     % Activate Connection flag
